@@ -52,8 +52,8 @@ https://templatemo.com/tm-595-3d-coverflow
                 description: "Transforming Indonesia's cultural heritage into sustainable economic opportunities through innovation and modern entrepreneurship."
             },
             {
-                title: "Lake Reflection",
-                description: "Serene waters mirroring the surrounding landscape"
+                title: "Ara Lestari Press",
+                description: "A Sustainable Path to Legacy."
             },
             {
                 title: "Ocean Sunset",
