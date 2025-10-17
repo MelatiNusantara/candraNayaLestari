@@ -6,46 +6,7 @@
     <title>Candra Naya Lestari - Portfolio</title>
     <link href="templatemo-3d-coverflow.css" rel="stylesheet">
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <style>
-      /* Memaksa posisi widget Eva AI ke kiri bawah */
-      .floated-chat-btn {
-        right: auto !important;
-        left: 10px !important;
-        background: #097CFF !important;
-      }
-
-      .floated-chat-w {
-        right: auto !important;
-        left: 10px !important;
-      }
-
-       #zsiq_float {
-        right: auto !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-      }
-
-        #zsiqwidget {
-            position: fixed !important;
-            left: 50% !important;
-            right: auto !important;
-            top: auto !important;
-            bottom: 10px !important;
-            transform: translateX(-50%) !important;
-        }
-
-         #zsiq_chat_wrap {
-            right: auto !important;
-            left: 50% !important;
-            /* Kita hanya butuh 2 baris ini untuk memindahkannya tanpa merusak animasi */
-        }
-
-        .siqcw-chat-cont {
-            /* Tidak perlu diubah posisinya, biarkan default agar mengikuti wadahnya */
-            /* Aturan ini hanya untuk memastikan tidak ada konflik */
-            position: relative !important;
-        } 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>    
     </style>
 <!--
 
@@ -69,6 +30,7 @@ https://templatemo.com/tm-595-3d-coverflow
             <a href="#about" class="menu-item">About</a>
             <a href="#ourBusiness" class="menu-item">Our Business</a>
             <a href="#contact" class="menu-item">Contact</a>
+            <a href="chat.html" class="menu-item">AI Chat</a>
         </nav>
         
         <div class="menu-toggle" id="menuToggle">
@@ -412,40 +374,6 @@ https://templatemo.com/tm-595-3d-coverflow
 
 <script src="templatemo-3d-coverflow-scripts.js"></script>
 <script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/68db8072438b6919521cb620/1j6cmrgig';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-
-<div id="ChitchatWidget"></div>
-<script src="https://widget.eva.id/js/fg.js?v=VSI1.2"></script>
-<script>
-    var set = new Array();
-    set["c_project"] = "175930152756440901";
-    set["c_button_float_bg"] = "#0f682e";
-    set["c_button_float_title"] = "FirdausPutra";
-    set["c_float_bg"] = "#0f682e";
-    set["c_float_title"] = "FirdausPutra";
-    set["c_float_title_color"] = "#FFFFFF";
-    set["c_float_image"] = "";
-    
-    // INI BAGIAN YANG DITAMBAHKAN UNTUK MENGATUR POSISI KE KIRI BAWAH
-    set["c_button_float_position"] = "bottom-right";
-
-    (function(i,s,o,g,r,a,m){
-        i["chitchat"]=r;
-        i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();
-        a=s.createElement(o),m=s.getElementsByTagName(o)[0];
-        a.async=1;
-        a.src=g;
-        m.parentNode.insertBefore(a,m)
-    })(window,document,"script","https://widget.eva.id/js/eva_lite.js?v=1.087", set);
 </script>
 
 <script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script>
