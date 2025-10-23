@@ -14,8 +14,8 @@
       display: flex;
       flex-direction: column;
       height: 100vh;
+      overflow: hidden; /* Mencegah scroll yang tidak perlu */
     }
-
     header {
       padding: 20px 50px;
       display: flex;
@@ -23,50 +23,32 @@
       align-items: center;
       background: rgba(0, 0, 0, 0.4);
       backdrop-filter: blur(6px);
-      position: fixed;
       width: 100%;
+      box-sizing: border-box;
       z-index: 10;
     }
-
-    header .logo img {
-      height: 70px;
-    }
-
-    header nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-
-    header nav a:hover {
-      color: #00d8ff;
-    }
-
+    header .logo img { height: 70px; }
+    header nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: 500; transition: 0.3s; }
+    header nav a:hover { color: #00d8ff; }
     .chat-container {
-      margin-top: 120px;
       flex: 1;
       display: flex;
       justify-content: center;
       align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
     }
-
     .chat-box {
-      width: 90%;
+      width: 100%;
       max-width: 800px;
-      height: 75vh;
+      height: 100%;
       background: rgba(255, 255, 255, 0.1);
       border-radius: 16px;
       box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
-      display: flex;
-      flex-direction: column;
       overflow: hidden;
       backdrop-filter: blur(10px);
-      position: relative;
     }
-
-    /* CSS baru untuk memastikan iframe Zoho memenuhi container */
+    /* Pastikan iframe dari zoho mengisi .chat-box dengan sempurna */
     .chat-box iframe {
         width: 100% !important;
         height: 100% !important;
@@ -85,7 +67,7 @@
     </div>
     <nav>
       <a href="index.html">Home</a>
-      <a href="chat.html" style="color:#00d8ff;">AI Chat</a>
+      <a href="chatZoho.html" style="color:#00d8ff;">Zoho Chat</a>
     </nav>
   </header>
 
@@ -94,6 +76,18 @@
       </div>
   </div>
 
-  <script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq4ab1eaa13361987ab814a217f29bcd9b132b5f8128b28a8be65eb5c0e8308ac0" defer></script>
+  <script>
+    window.$zoho = window.$zoho || {};
+    $zoho.salesiq = $zoho.salesiq || {
+      widgetcode: "siq4ab1eaa13361987ab814a217f29bcd9b132b5f8128b28a8be65eb5c0e8308ac0",
+      ready: function() {
+        $zoho.salesiq.floatbutton.hide();
+        $zoho.salesiq.chat.render("chat-box");
+        $zoho.salesiq.chat.show();
+      }
+    };
+  </script>
+  <script id="zsiqscript" src="https://salesiq.zohopublic.com/widget" defer></script>
+
 </body>
 </html>
