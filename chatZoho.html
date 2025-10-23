@@ -7,21 +7,17 @@
   <link href="templatemo-3d-coverflow.css" rel="stylesheet">
   <style>
     body {
-      /* Mengembalikan body ke kondisi normal */
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       margin: 0;
       color: white;
     }
-    
     .page-wrapper {
-      /* Memindahkan layout flexbox ke div pembungkus */
       display: flex;
       flex-direction: column;
       height: 100vh;
       overflow: hidden;
     }
-
     header {
       padding: 20px 50px;
       display: flex;
@@ -36,7 +32,6 @@
     header .logo img { height: 70px; }
     header nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: 500; transition: 0.3s; }
     header nav a:hover { color: #00d8ff; }
-
     .chat-container {
       flex: 1;
       display: flex;
@@ -44,7 +39,6 @@
       align-items: center;
       padding: 20px;
       box-sizing: border-box;
-      /* Menambahkan min-height untuk mencegah kontainer kolaps saat flexbox loading */
       min-height: 0;
     }
     .chat-box {
@@ -82,22 +76,11 @@
 
     <div class="chat-container">
       <div class="chat-box" id="chat-box">
-      </div>
+          </div>
     </div>
   </div>
 
-  <script>
-    window.$zoho = window.$zoho || {};
-    $zoho.salesiq = $zoho.salesiq || {
-      widgetcode: "siq4ab1eaa13361987ab814a217f29bcd9b132b5f8128b28a8be65eb5c0e8308ac0",
-      ready: function() {
-        // $zoho.salesiq.floatbutton.hide();
-        $zoho.salesiq.chat.render("chat-box");
-        $zoho.salesiq.chat.show();
-      }
-    };
-  </script>
-  <script id="zsiqscript" src="https://salesiq.zohopublic.com/widget"></script>
+  <script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq4ab1eaa13361987ab814a217f29bcd9b132b5f8128b28a8be65eb5c0e8308ac0" defer></script>
 
 </body>
 </html>
