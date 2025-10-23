@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tes Embed Zoho Paling Minimal</title>
+    <style>
+        /* CSS SANGAT SEDERHANA HANYA UNTUK MELIHAT KOTAKNYA */
+        #chat-box {
+            width: 800px;
+            height: 600px;
+            margin: 40px auto; /* Memberi sedikit ruang */
+            border: 3px dashed red; /* Agar kita tahu di mana kotaknya jika chat tidak muncul */
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Halaman Tes Embed Zoho</h1>
+    <p>Jika chat muncul di dalam kotak putus-putus merah di bawah ini, maka skripnya berhasil.</p>
+
+    <div id="chat-box"></div>
+
+    <script>
+        window.$zoho = window.$zoho || {};
+        $zoho.salesiq = $zoho.salesiq || {
+          widgetcode: "siq4ab1eaa13361987ab814a217f29bcd9b132b5f8128b28a8be65eb5c0e8308ac0",
+          ready: function() {
+            // Kita gunakan CSS untuk menyembunyikan tombol default jika muncul
+            $zoho.salesiq.chat.render("chat-box");
+            $zoho.salesiq.chat.show();
+          }
+        };
+    </script>
+    <script id="zsiqscript" src="https://salesiq.zohopublic.com/widget"></script>
+    
+    <style>
+        #zsiq_float {
+            display: none !important;
+        }
+    </style>
+
+</body>
+</html>
