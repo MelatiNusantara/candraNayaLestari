@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Chat - Candra Naya Lestari</title>
+  <link href="templatemo-3d-coverflow.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      margin: 0;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    header {
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(6px);
+      position: fixed;
+      width: 100%;
+      z-index: 10;
+    }
+
+    header .logo img {
+      height: 70px;
+    }
+
+    header nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    header nav a:hover {
+      color: #00d8ff;
+    }
+
+    .chat-container {
+      margin-top: 120px;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .chat-box {
+      width: 90%;
+      max-width: 800px;
+      height: 75vh;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      position: relative;
+    }
+
+    /* CSS baru untuk memastikan iframe Zoho memenuhi container */
+    .chat-box iframe {
+        width: 100% !important;
+        height: 100% !important;
+        border: none !important;
+        border-radius: 16px !important;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo-candranaya.png" alt="Logo" />
+      </a>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="chat.html" style="color:#00d8ff;">AI Chat</a>
+    </nav>
+  </header>
+
+  <div class="chat-container">
+    <div class="chat-box" id="chat-box">
+      </div>
+  </div>
+
+  <script>
+    window.$zoho = window.$zoho || {};
+    $zoho.salesiq = $zoho.salesiq || {
+      widgetcode: "siq4ab1eaa13361987ab814a217f29bcd9b132b5f8128b28a8be65eb5c0e8308ac0",
+      ready: function() {
+        $zoho.salesiq.floatbutton.hide();
+        $zoho.salesiq.chat.render("chat-box");
+        $zoho.salesiq.chat.show();
+      }
+    };
+  </script>
+  <script id="zsiqscript" src="https://salesiq.zohopublic.com/widget" defer></script>
+
+</body>
+</html>
