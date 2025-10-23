@@ -8,7 +8,7 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background: linear-gradient(135deg, #0f2027, #203a4, #2c5364);
       margin: 0;
       color: white;
     }
@@ -57,6 +57,11 @@
         border: none !important;
         border-radius: 16px !important;
     }
+
+    /* CSS SAKTI UNTUK SEMBUNYIKAN TOMBOL ZOHO */
+    #zsiq_float {
+        display: none !important;
+    }
   </style>
 </head>
 <body>
@@ -85,11 +90,10 @@
     $zoho.salesiq = $zoho.salesiq || {
       widgetcode: "siq4ab1eaa13361987ab814a217f29bcd9b132b5f8128b28a8be65eb5c0e8308ac0",
       ready: function() {
-        setTimeout(function() {
-          $zoho.salesiq.floatbutton.hide();
-          $zoho.salesiq.chat.render("chat-box");
-          $zoho.salesiq.chat.show();
-        }, 500); // Jeda 0.5 detik
+        // Hapus perintah .hide() yang error
+        // Langsung render dan tampilkan chat
+        $zoho.salesiq.chat.render("chat-box");
+        $zoho.salesiq.chat.show();
       }
     };
   </script>
